@@ -3,5 +3,10 @@
 </p>
 
 <br>
-Smart Home UI Implementation in SwiftUI
-UI Designer : https://lnkd.in/gKx7ZgMz
+
+<p>
+  Smart Home UI Implementation in SwiftUI
+
+</p>
+
+    UI Designer : https://lnkd.in/gKx7ZgMz
