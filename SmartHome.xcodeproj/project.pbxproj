@@ -13,10 +13,9 @@
 		0863B77A2B5F756F00140672 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0863B7792B5F756F00140672 /* Preview Assets.xcassets */; };
 		0863B7842B5F760B00140672 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863B7832B5F760B00140672 /* HomeView.swift */; };
 		0863B7872B5F7B6000140672 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0863B7862B5F7B6000140672 /* HomeHeaderView.swift */; };
-		0896D1C82B601F9C00BD0B56 /* SmartSpotlightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896D1C72B601F9C00BD0B56 /* SmartSpotlightView.swift */; };
-		0896D1CA2B601FCF00BD0B56 /* SmartSpeakerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896D1C92B601FCF00BD0B56 /* SmartSpeakerView.swift */; };
-		0896D1CC2B60207500BD0B56 /* SmartTVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896D1CB2B60207500BD0B56 /* SmartTVView.swift */; };
-		0896D1CE2B60243500BD0B56 /* SmartAirConditioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896D1CD2B60243500BD0B56 /* SmartAirConditioner.swift */; };
+		0896D1C82B601F9C00BD0B56 /* SmartDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0896D1C72B601F9C00BD0B56 /* SmartDevice.swift */; };
+		08B3154F2B60E33F00C1B160 /* DevicesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B3154E2B60E33F00C1B160 /* DevicesModel.swift */; };
+		08B315532B60F89B00C1B160 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08B315522B60F89B00C1B160 /* TestView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,10 +26,9 @@
 		0863B7792B5F756F00140672 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0863B7832B5F760B00140672 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0863B7862B5F7B6000140672 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
-		0896D1C72B601F9C00BD0B56 /* SmartSpotlightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSpotlightView.swift; sourceTree = "<group>"; };
-		0896D1C92B601FCF00BD0B56 /* SmartSpeakerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSpeakerView.swift; sourceTree = "<group>"; };
-		0896D1CB2B60207500BD0B56 /* SmartTVView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartTVView.swift; sourceTree = "<group>"; };
-		0896D1CD2B60243500BD0B56 /* SmartAirConditioner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartAirConditioner.swift; sourceTree = "<group>"; };
+		0896D1C72B601F9C00BD0B56 /* SmartDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartDevice.swift; sourceTree = "<group>"; };
+		08B3154E2B60E33F00C1B160 /* DevicesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevicesModel.swift; sourceTree = "<group>"; };
+		08B315522B60F89B00C1B160 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +97,10 @@
 		0863B7822B5F75FF00140672 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				08B3154D2B60E33100C1B160 /* Model */,
 				0863B7852B5F7B3300140672 /* Components */,
 				0863B7832B5F760B00140672 /* HomeView.swift */,
+				08B315522B60F89B00C1B160 /* TestView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -109,12 +109,17 @@
 			isa = PBXGroup;
 			children = (
 				0863B7862B5F7B6000140672 /* HomeHeaderView.swift */,
-				0896D1C72B601F9C00BD0B56 /* SmartSpotlightView.swift */,
-				0896D1C92B601FCF00BD0B56 /* SmartSpeakerView.swift */,
-				0896D1CB2B60207500BD0B56 /* SmartTVView.swift */,
-				0896D1CD2B60243500BD0B56 /* SmartAirConditioner.swift */,
+				0896D1C72B601F9C00BD0B56 /* SmartDevice.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		08B3154D2B60E33100C1B160 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08B3154E2B60E33F00C1B160 /* DevicesModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,14 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0896D1CC2B60207500BD0B56 /* SmartTVView.swift in Sources */,
-				0896D1CA2B601FCF00BD0B56 /* SmartSpeakerView.swift in Sources */,
+				08B3154F2B60E33F00C1B160 /* DevicesModel.swift in Sources */,
 				0863B7872B5F7B6000140672 /* HomeHeaderView.swift in Sources */,
 				0863B7842B5F760B00140672 /* HomeView.swift in Sources */,
 				0863B7752B5F756D00140672 /* ContentView.swift in Sources */,
-				0896D1CE2B60243500BD0B56 /* SmartAirConditioner.swift in Sources */,
+				08B315532B60F89B00C1B160 /* TestView.swift in Sources */,
 				0863B7732B5F756D00140672 /* SmartHomeApp.swift in Sources */,
-				0896D1C82B601F9C00BD0B56 /* SmartSpotlightView.swift in Sources */,
+				0896D1C82B601F9C00BD0B56 /* SmartDevice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

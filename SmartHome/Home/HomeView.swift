@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+
 struct HomeView: View {
-    @State private var smartSpotligh = true
-    @State private var smartSpeaker = true
-    @State private var smartTV = false
-    @State private var smartAirConditioner = false
+    @State private var devices: [DevicesModel] = DeviceData.Devices
+
+    private let gridItem: [GridItem] = [
+        .init(.flexible(), spacing: 1),
+        .init(.flexible(), spacing: 1),
+        ]
     
     var body: some View {
         NavigationStack{
@@ -19,25 +22,13 @@ struct HomeView: View {
                 VStack(spacing: 12){
                     HomeHeaderView()
                     
-                    HStack(spacing: 12) {
-                        SmartSpotlightView(smartDevice: $smartSpotligh)
-                        
-                        
-                        
-                        SmartSpeakersView(smartDevice: $smartSpeaker)
-                        
+                    
+                    LazyVGrid(columns: gridItem) {
+                        ForEach(devices) { device in
+                            SmartDevice(smartDevice: self.$devices[devices.firstIndex(of: device)!].isSelected, device: device)
+                        }
                     }
-                    
-                    
-                    
-                    HStack(spacing: 12) {
-                        SmartTVView(smartDevice: $smartTV)
-                        
-                        
-                        
-                        SmartAirConditioner(smartDevice: $smartAirConditioner)
-                    }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, 8)
                     
                 }
                 .frame(maxWidth: .infinity, alignment: .top)
@@ -66,6 +57,9 @@ struct HomeView: View {
 //            }
         }
     }
+    
+    
+    
 }
 
 #Preview {
